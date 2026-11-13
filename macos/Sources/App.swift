@@ -234,6 +234,7 @@ enum Snapshot {
             canvas.layoutDock()
         }
         render(canvas, to: out)
+        print("panel: \(canvas.dock.compact ? "len ikonky" : "s popismi"), \(Int(canvas.dock.panelSize().width)) bodov")
         NSApp.terminate(nil)
     }
 

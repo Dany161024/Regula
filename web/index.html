@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Regula — a real-size ruler for your screen</title>
-  <meta name="description" content="Regula turns your laptop screen into real-size measuring tools: rulers in millimetres and inches, protractors, a screen-diagonal meter, screw and pin-pitch gauges. Free, for Linux.">
+  <meta name="description" content="Regula turns your laptop screen into real-size measuring tools: rulers in millimetres and inches, protractors, a screen-diagonal meter, screw and pin-pitch gauges. Free, for Linux and macOS.">
   <meta name="theme-color" content="#1f9ede">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <!-- Náhľad odkazu (Reddit, Discord): og:image musí byť ABSOLÚTNA adresa -->
@@ -38,7 +38,7 @@
   <!-- ===== Hero ===== -->
   <section class="hero">
     <div class="wrap hero-text">
-      <p class="eyebrow">Free · Linux · Python + Qt</p>
+      <p class="eyebrow">Free · Linux &amp; macOS</p>
       <h1>A ruler that's <span class="u">actually</span> to scale.</h1>
       <p class="lede">
         Regula turns your screen into real-size measuring tools — rulers, protractors, a screen-diagonal meter,
@@ -169,7 +169,7 @@
         </div>
         <div class="feature">
           <h3>Window or fullscreen</h3>
-          <p>Fullscreen by default; <kbd>F11</kbd> turns it into a resizable window that remembers its size.</p>
+          <p>Fullscreen by default; <kbd>F11</kbd> (<kbd>⌃⌘F</kbd> on a Mac) turns it into a resizable window that remembers its size.</p>
         </div>
         <div class="feature">
           <h3>Two monitors? Fine.</h3>
@@ -213,7 +213,7 @@
         <div><dt><kbd>B</kbd></dt><dd>Background</dd></div>
         <div><dt><kbd>K</kbd></dt><dd>Calibrate with a card</dd></div>
         <div><dt><kbd>H</kbd></dt><dd>Hide the panel</dd></div>
-        <div><dt><kbd>F11</kbd></dt><dd>Window / fullscreen</dd></div>
+        <div><dt><kbd>F11</kbd> · Mac <kbd>⌃⌘F</kbd></dt><dd>Window / fullscreen</dd></div>
         <div><dt><kbd>Esc</kbd></dt><dd>Clear / reset</dd></div>
         <div><dt><kbd>Q</kbd></dt><dd>Quit</dd></div>
       </dl>
@@ -223,10 +223,10 @@
   <!-- ===== Install ===== -->
   <section id="install">
     <div class="wrap narrow">
-      <h2>Install</h2>
+      <h2>Install on Linux</h2>
       <p class="section-lede">
-        You need Linux, Python 3.9+ and PySide6 (Qt 6). Developed and tested on Linux Mint 22 and Fedora 44 with X11;
-        Wayland, Windows and macOS are untested.
+        You need Python 3.9+ and PySide6 (Qt 6). Developed and tested on Linux Mint 22 and Fedora 44 with X11;
+        Wayland and Windows are untested. On a Mac, use the <a href="#download">native app</a> instead.
       </p>
 
       <ol class="install">
@@ -271,15 +271,30 @@ EOF</code></pre>
 
   <!-- ===== Download ===== -->
   <section id="download" class="band">
-    <div class="wrap narrow">
+    <div class="wrap dl-wrap">
       <div class="download">
         <img src="icon.svg" alt="" width="72" height="72">
         <div class="download-text">
           <h2>Download</h2>
-          <p>One Python file and an icon. No account, no telemetry, no network access — read the code before you run it.</p>
-          <div class="cta">
-            <a class="btn" href="download/regula.zip" download>regula.zip <span class="size">26 kB</span></a>
-            <a class="btn btn-ghost" href="download/regula.py">View regula.py <span class="size">89 kB</span></a>
+          <p>No account, no telemetry, no network access.</p>
+          <div class="platforms">
+            <div class="platform">
+              <h3>Linux</h3>
+              <p>One Python file and an icon — read the code before you run it. See <a href="#install">Install on Linux</a>.</p>
+              <div class="cta">
+                <a class="btn" href="download/regula.zip" download>regula.zip <span class="size">26 kB</span></a>
+                <a class="btn btn-ghost" href="download/regula.py">View regula.py <span class="size">89 kB</span></a>
+              </div>
+            </div>
+            <div class="platform">
+              <h3>macOS</h3>
+              <p>Native app for Intel and Apple Silicon, macOS 13 Ventura or newer. Open the disk image and drag Regula to Applications.</p>
+              <div class="cta">
+                <a class="btn" href="download/Regula-1.0-macOS.dmg" download>Download .dmg <span class="size">0.9 MB</span></a>
+              </div>
+              <p class="small">Not notarized by Apple: the first time, open <strong>System Settings → Privacy &amp; Security</strong>
+                and click <strong>Open Anyway</strong>. Tested on an Intel MacBook Pro with macOS 15; the Apple Silicon build is untested.</p>
+            </div>
           </div>
           <p class="small">Updated November 2026.</p>
         </div>

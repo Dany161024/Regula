@@ -52,7 +52,7 @@ final class DockView: NSView {
     var items: [Item] = [] { didSet { relayout() } }
     var compact = false                 // na užšej obrazovke len ikonky (názov je v bublinke)
     let margin: CGFloat = 16            // okraj na tieň okolo panela
-    private let font = NSFont.systemFont(ofSize: 10.5)
+    private let font = NSFont.systemFont(ofSize: 10)
     private var rects: [CGRect] = []
     private var separators: [CGFloat] = []
     private var hovered: Int?
@@ -64,7 +64,7 @@ final class DockView: NSView {
 
     private func width(_ item: Item) -> CGFloat {
         if compact { return 40 }
-        return max(item.id == "snap" ? 76 : 50, ceil(textSize(item.title, font).width) + 12)
+        return max(item.id == "snap" ? 66 : 46, ceil(textSize(item.title, font).width) + 10)
     }
 
     private var itemHeight: CGFloat { compact ? 40 : 50 }
@@ -435,8 +435,8 @@ final class CalibrationController: NSObject, NSWindowDelegate {
         super.init()
 
         let info = NSTextField(wrappingLabelWithString: L(
-            "Displej \(screen.localizedName). Prilož na obrazovku kartu formátu ID-1 — platobnú kartu, občiansky, ISIC alebo kartičku poistenca. Zarovnaj ju s ľavým horným rohom obdĺžnika a posúvaj, kým nesedí aj pravý okraj. Jemne: šípky ← →.",
-            "Display \(screen.localizedName). Hold an ID-1 size card to the screen — a bank card, ID card or student card. Line it up with the top-left corner of the outline and move the slider until the right edge matches too. Fine steps: arrow keys ← →."))
+            "Displej: \(screen.localizedName). Prilož na obrazovku kartu formátu ID-1 — platobnú kartu, občiansky, ISIC alebo kartičku poistenca. Zarovnaj ju s ľavým horným rohom obdĺžnika a posúvaj, kým nesedí aj pravý okraj. Jemne: šípky ← →.",
+            "Display: \(screen.localizedName). Hold an ID-1 size card to the screen — a bank card, ID card or student card. Line it up with the top-left corner of the outline and move the slider until the right edge matches too. Fine steps: arrow keys ← →."))
         info.preferredMaxLayoutWidth = card.intrinsicContentSize.width
         slider.minValue = -1500             // stotiny percenta → ±15 %
         slider.maxValue = 1500
