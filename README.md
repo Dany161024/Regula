@@ -47,6 +47,11 @@ python3 -m venv ~/.venvs/regula
 ~/.venvs/regula/bin/python regula.py
 ```
 
+## Bugs and ideas
+
+Found a bug or a wrong measurement? [Open a bug report](https://github.com/Dany161024/Regula/issues/new?template=bug_report.yml)
+— the form asks for your platform and display, which is usually what matters. Ideas for new tools are welcome too.
+
 ## License
 
 Regula is free software under the [GNU General Public License v3.0](LICENSE).

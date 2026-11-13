@@ -1,0 +1,20 @@
+name: Idea or new tool
+description: Suggest a feature or a measuring tool
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Regula to do?
+      description: What would you measure with it, and how do you do it today?
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform you use
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux

@@ -1,0 +1,60 @@
+name: Bug report
+description: Something doesn't work, crashes or measures the wrong size
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time! Issues are public, so please don't include personal information.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Regula version
+      description: Shown under Menu → About Regula (Windows), Regula → About Regula (macOS), or the file you downloaded.
+      placeholder: "1.0"
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "Windows 11 23H2 · macOS 14.5 on an M2 · Fedora 44 with Wayland"
+    validations:
+      required: true
+  - type: input
+    id: display
+    attributes:
+      label: Display
+      description: >-
+        Size or model, resolution and scaling. If sizes come out wrong, add what the
+        Diagonal tool shows under "This display".
+      placeholder: "14″ laptop, 1920 × 1080, 125 % — Diagonal tool says 15.6″"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the Protractor
+        2. Type 45 and press Enter
+        3. …
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or anything else
+      description: >-
+        Drag images here. For a wrong scale, a photo of a card or a real ruler held to the screen helps a lot.
