@@ -282,7 +282,7 @@ section.band { background: var(--band); }
 .foot { padding: 0 0 36px; }
 .foot .ticks { margin-bottom: 22px; }
 .foot-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--soft); font-size: 0.95rem; }
-.foot-row span { display: inline-flex; align-items: center; gap: 8px; }
+.foot-row span:first-child { display: inline-flex; align-items: center; gap: 8px; }
 
 @media (max-width: 640px) {
   section { padding: 60px 0; }
