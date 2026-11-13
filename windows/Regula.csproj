@@ -18,6 +18,7 @@
     <Copyright>regula.is-my.app</Copyright>
     <DebugType>none</DebugType>
     <Deterministic>true</Deterministic>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <GenerateSupportedRuntime>false</GenerateSupportedRuntime>
