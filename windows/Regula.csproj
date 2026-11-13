@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Regula pre Windows: jeden malý Regula.exe pre .NET Framework 4.8 (je v každom Windows 10 a 11).
+       Kompiluje sa na Linuxe cez ./build.sh (dotnet SDK v ~/.dotnet), referenčné knižnice stiahne NuGet. -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>Regula</AssemblyName>
+    <RootNamespace>Regula</RootNamespace>
+    <ApplicationIcon>Regula.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>1.0.0</Version>
+    <Product>Regula</Product>
+    <AssemblyTitle>Regula</AssemblyTitle>
+    <Description>Regula — screen rulers</Description>
+    <Company>Dany161024</Company>
+    <Copyright>regula.is-my.app</Copyright>
+    <DebugType>none</DebugType>
+    <Deterministic>true</Deterministic>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateSupportedRuntime>false</GenerateSupportedRuntime>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Sources/*.cs" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+</Project>

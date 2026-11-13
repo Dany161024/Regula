@@ -2,3 +2,5 @@ __pycache__/
 macos/build/
 macos/vendor/
 *.pyc
+windows/obj/
+windows/build/
