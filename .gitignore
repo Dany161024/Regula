@@ -1,0 +1,4 @@
+__pycache__/
+macos/build/
+macos/vendor/
+*.pyc

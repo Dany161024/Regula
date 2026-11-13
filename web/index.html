@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regula — a real-size ruler for your screen</title>
+  <meta name="description" content="Regula turns your laptop screen into real-size measuring tools: rulers in millimetres and inches, protractors, a screen-diagonal meter, screw and pin-pitch gauges. Free, for Linux.">
+  <meta name="theme-color" content="#1f9ede">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <!-- Náhľad odkazu (Reddit, Discord): og:image musí byť ABSOLÚTNA adresa -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://regula.is-my.app/">
+  <meta property="og:title" content="Regula — a real-size ruler for your screen">
+  <meta property="og:description" content="Rulers, protractors, a screen-diagonal meter and screw & pin-pitch gauges — in real millimetres, on your laptop screen.">
+  <meta property="og:image" content="https://regula.is-my.app/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#">
+      <img src="icon.svg" alt="" width="32" height="32">
+      <span>Regula</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#tools">Tools</a>
+      <a href="#install">Install</a>
+      <a class="btn btn-small" href="#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="wrap hero-text">
+      <p class="eyebrow">Free · Linux · Python + Qt</p>
+      <h1>A ruler that's <span class="u">actually</span> to scale.</h1>
+      <p class="lede">
+        Regula turns your screen into real-size measuring tools — rulers, protractors, a screen-diagonal meter,
+        screw and pin-pitch gauges. Lay something on the display and read its size in real millimetres.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#download">Download Regula</a>
+        <a class="btn btn-ghost" href="#tools">See all 13 tools</a>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <figure class="screen">
+        <video autoplay muted loop playsinline preload="metadata" poster="img/ruler.webp"
+               width="1280" height="720" aria-label="Regula demo: measuring a box with the ruler, turning the protractor, measuring a phone's screen diagonal">
+          <source src="media/demo.webm" type="video/webm">
+          <source src="media/demo.mp4" type="video/mp4">
+        </video>
+      </figure>
+      <div class="ticks" aria-hidden="true"></div>
+      <p class="caption">
+        Real recording of the app: a 60 × 35 mm box with 1 mm snapping, the protractor, and a phone's screen diagonal.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== How it works ===== -->
+  <section id="how" class="band">
+    <div class="wrap">
+      <h2>How does it know the real size?</h2>
+      <p class="section-lede">
+        A web page can't know how big your pixels are — the ruler marks on this site are just decoration.
+        A desktop app can ask the display itself.
+      </p>
+      <ol class="steps">
+        <li>
+          <span class="step-num">1</span>
+          <h3>Your display reports its width</h3>
+          <p>Every monitor tells the computer its physical size. A 14″ ThinkPad says: <b>309 mm</b>.</p>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <h3>Pixels per millimetre</h3>
+          <p>1920 px across 309 mm is <b>6.21 px per mm</b>. Every tick, circle and protractor is drawn with that number.</p>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <h3>Calibrate with any card</h3>
+          <p>Want it perfect? Hold a bank card, ID or student card (all 85.60 mm wide) to the screen and match the outline. Done once per monitor.</p>
+        </li>
+      </ol>
+      <p class="note">
+        Most displays report their size to the nearest millimetre, which is usually accurate to well under 1 %.
+        Some monitors report nonsense — that's what calibration is for. With two monitors, each one gets its own
+        scale, and when you drag the window across, your measurements stay in millimetres.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Tools ===== -->
+  <section id="tools">
+    <div class="wrap">
+      <h2>13 tools, one panel</h2>
+      <p class="section-lede">Pick a tool from the panel at the bottom, or press <kbd>Tab</kbd> to flip through them.</p>
+
+      <div class="groups">
+        <article class="group">
+          <h3>Rulers</h3>
+          <ul class="tools">
+            <li><img src="img/icons/cm.png" alt="" width="26" height="26"><div><b>Centimetres</b><span>Millimetre scales along two edges, a full-screen crosshair, and drag-to-measure: width, height and diagonal at once.</span></div></li>
+            <li><img src="img/icons/in.png" alt="" width="26" height="26"><div><b>Inches</b><span>1/16″ marks; readouts in decimals and the nearest fraction, like 1 3/8″.</span></div></li>
+            <li><img src="img/icons/px.png" alt="" width="26" height="26"><div><b>Pixels</b><span>Measure anything on your screen in pixels — pairs well with the transparent background.</span></div></li>
+            <li><img src="img/icons/dual.png" alt="" width="26" height="26"><div><b>cm + inches</b><span>Both scales on every edge.</span></div></li>
+            <li><img src="img/icons/grid.png" alt="" width="26" height="26"><div><b>Millimetre paper</b><span>A full-screen 1 mm grid. Try it on the cutting-mat green background.</span></div></li>
+          </ul>
+        </article>
+
+        <article class="group">
+          <h3>Angles &amp; circles</h3>
+          <ul class="tools">
+            <li><img src="img/icons/prot.png" alt="" width="26" height="26"><div><b>Protractor 180°</b><span>Two draggable arms whose guide lines run across the whole screen, so you can line them up with things bigger than the dial.</span></div></li>
+            <li><img src="img/icons/prot360.png" alt="" width="26" height="26"><div><b>Protractor 360°</b><span>A full circle that shows the angle and its reflex, like 132° / 228°.</span></div></li>
+            <li><img src="img/icons/circle.png" alt="" width="26" height="26"><div><b>Diameter</b><span>Rings every 2 mm. Drop a coin, a screw head or a bottle cap in the middle and hover to read ⌀ to 0.1 mm.</span></div></li>
+            <li><img src="img/icons/radius.png" alt="" width="26" height="26"><div><b>Radius from 3 points</b><span>Click three points on any arc — a phone's rounded corner, a wheel, a curved edge — and get R and ⌀ of the full circle.</span></div></li>
+          </ul>
+        </article>
+
+        <article class="group">
+          <h3>Measure</h3>
+          <ul class="tools">
+            <li><img src="img/icons/diag.png" alt="" width="26" height="26"><div><b>Screen diagonal</b><span>Lay a phone on your laptop and drag over its display: diagonal in inches and centimetres plus aspect ratio (19.5:9, 20:9…). Also shows your own screen's size and PPI.</span></div></li>
+            <li><img src="img/icons/path.png" alt="" width="26" height="26"><div><b>Path &amp; area</b><span>Click a polyline for its total length; close the shape to get its perimeter and area.</span></div></li>
+          </ul>
+        </article>
+
+        <article class="group">
+          <h3>Workshop</h3>
+          <ul class="tools">
+            <li><img src="img/icons/screw.png" alt="" width="26" height="26"><div><b>Screws M1.6 – M8</b><span>Real-size holes, side profiles, nuts and a length scale. Hover for thread pitch, wrench and hex-key size.</span></div></li>
+            <li><img src="img/icons/pitch.png" alt="" width="26" height="26"><div><b>Pin pitch</b><span>Combs from 2.54 down to 0.5 mm, labelled with real connectors — JST XH/PH/ZH/SH, PicoBlade, SOIC, TSSOP, FFC. Hover to count pins.</span></div></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Precision ===== -->
+  <section class="band">
+    <div class="wrap">
+      <h2>Made for exact numbers</h2>
+      <p class="section-lede">Dragging with a mouse is never perfect, so Regula gives you three ways around it.</p>
+      <div class="features">
+        <div class="feature">
+          <h3>Snap to a step</h3>
+          <p>Points snap to 0.5, 1 or 5 mm (1/32–1/4″ for inches, 0.5–5° on the protractor). 20 × 50 mm is exactly 20 × 50 mm.</p>
+        </div>
+        <div class="feature">
+          <h3>Just type it</h3>
+          <p>Start typing and fields pop up: <kbd>20</kbd> <kbd>Enter</kbd> <kbd>50</kbd> <kbd>Enter</kbd>. Works for rulers, the diagonal, paths, angles and circles.</p>
+        </div>
+        <div class="feature">
+          <h3>Nudge by 0.1 mm</h3>
+          <p>Arrow keys move the active point by a tenth of a millimetre — hold <kbd>Shift</kbd> for 1 mm.</p>
+        </div>
+        <div class="feature">
+          <h3>Four backgrounds</h3>
+          <p>Light, dark, cutting-mat green, and transparent — for measuring things that are on your screen.</p>
+        </div>
+        <div class="feature">
+          <h3>Window or fullscreen</h3>
+          <p>Fullscreen by default; <kbd>F11</kbd> turns it into a resizable window that remembers its size.</p>
+        </div>
+        <div class="feature">
+          <h3>Two monitors? Fine.</h3>
+          <p>Each display keeps its own scale and calibration. Move the window and a 20 mm line is still 20 mm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section id="gallery">
+    <div class="wrap">
+      <h2>Screenshots</h2>
+      <p class="section-lede">Straight from the app on a 14″ 1080p laptop.</p>
+      <div class="gallery">
+        <figure><a href="img/ruler.webp"><img src="img/ruler.webp" alt="Centimetre ruler measuring a 60 by 35 millimetre box" width="1920" height="1080" loading="lazy"></a><figcaption>Centimetres with 1 mm snap: 60 × 35 mm, diagonal 69.5 mm.</figcaption></figure>
+        <figure><a href="img/mat.webp"><img src="img/mat.webp" alt="Millimetre grid on a green cutting-mat background" width="1920" height="1080" loading="lazy"></a><figcaption>Millimetre paper on the cutting-mat background.</figcaption></figure>
+        <figure><a href="img/diagonal.webp"><img src="img/diagonal.webp" alt="Screen diagonal tool measuring a phone display as 6.0 inches" width="1920" height="1080" loading="lazy"></a><figcaption>A phone's display: 5.99″, 19.5:9 — and the laptop's own 14.0″ screen.</figcaption></figure>
+        <figure><a href="img/calibrate.webp"><img src="img/calibrate.webp" alt="Calibration dialog with a card outline of 85.60 by 53.98 millimetres" width="1920" height="1080" loading="lazy"></a><figcaption>Calibration: hold any bank or ID card to the screen and match the outline.</figcaption></figure>
+        <figure><a href="img/protractor.webp"><img src="img/protractor.webp" alt="180 degree protractor showing 52.5 degrees" width="1920" height="1080" loading="lazy"></a><figcaption>Protractor 180°: the arms reach across the whole screen.</figcaption></figure>
+        <figure><a href="img/protractor360.webp"><img src="img/protractor360.webp" alt="360 degree protractor in dark mode" width="1920" height="1080" loading="lazy"></a><figcaption>Protractor 360° in dark mode: 132° and its reflex 228°.</figcaption></figure>
+        <figure><a href="img/screws.webp"><img src="img/screws.webp" alt="Real-size metric screw gauge from M1.6 to M8" width="1920" height="1080" loading="lazy"></a><figcaption>Screw gauge M1.6 – M8, hovering over M3.</figcaption></figure>
+        <figure><a href="img/pitch.webp"><img src="img/pitch.webp" alt="Pin pitch combs from 2.54 to 0.5 millimetres" width="1920" height="1080" loading="lazy"></a><figcaption>Pin pitch: 8 pins at 2.0 mm (JST PH) = 14.00 mm.</figcaption></figure>
+        <figure><a href="img/path.webp"><img src="img/path.webp" alt="Closed path showing perimeter and area" width="1920" height="1080" loading="lazy"></a><figcaption>A closed path: perimeter 349.9 mm, area 76.34 cm².</figcaption></figure>
+        <figure><a href="img/radius.webp"><img src="img/radius.webp" alt="Circle fitted through three points on an arc" width="1920" height="1080" loading="lazy"></a><figcaption>Radius from three points on an arc.</figcaption></figure>
+        <figure><a href="img/diameter.webp"><img src="img/diameter.webp" alt="Concentric diameter rings" width="1920" height="1080" loading="lazy"></a><figcaption>Diameter rings — a 1 € coin is 23.25 mm.</figcaption></figure>
+        <figure><a href="img/typing.webp"><img src="img/typing.webp" alt="Typing an exact width and height" width="1920" height="1080" loading="lazy"></a><figcaption>Typing an exact size: 20 Enter 50 Enter.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Shortcuts ===== -->
+  <section class="band">
+    <div class="wrap">
+      <h2>Keyboard shortcuts</h2>
+      <dl class="keys">
+        <div><dt><kbd>Tab</kbd> / <kbd>Shift</kbd> <kbd>Tab</kbd></dt><dd>Next / previous tool</dd></div>
+        <div><dt>Type a number</dt><dd>Enter an exact size</dd></div>
+        <div><dt><kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd></dt><dd>Nudge 0.1 mm (<kbd>Shift</kbd>: 1 mm)</dd></div>
+        <div><dt><kbd>S</kbd></dt><dd>Snap step</dd></div>
+        <div><dt><kbd>B</kbd></dt><dd>Background</dd></div>
+        <div><dt><kbd>K</kbd></dt><dd>Calibrate with a card</dd></div>
+        <div><dt><kbd>H</kbd></dt><dd>Hide the panel</dd></div>
+        <div><dt><kbd>F11</kbd></dt><dd>Window / fullscreen</dd></div>
+        <div><dt><kbd>Esc</kbd></dt><dd>Clear / reset</dd></div>
+        <div><dt><kbd>Q</kbd></dt><dd>Quit</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===== Install ===== -->
+  <section id="install">
+    <div class="wrap narrow">
+      <h2>Install</h2>
+      <p class="section-lede">
+        You need Linux, Python 3.9+ and PySide6 (Qt 6). Developed and tested on Linux Mint 22 and Fedora 44 with X11;
+        Wayland, Windows and macOS are untested.
+      </p>
+
+      <ol class="install">
+        <li>
+          <h3>Install PySide6</h3>
+          <p>Any distro, in its own environment:</p>
+          <pre class="code"><code>python3 -m venv ~/.venvs/regula
+~/.venvs/regula/bin/pip install PySide6</code></pre>
+          <p class="small">On Ubuntu or Linux Mint you may need <code>sudo apt install python3-venv</code> first.
+            Or use your distro's package: <code>sudo dnf install python3-pyside6</code> (Fedora),
+            <code>sudo pacman -S pyside6</code> (Arch) — then run Regula with plain <code>python3</code>.</p>
+        </li>
+        <li>
+          <h3>Download and unpack</h3>
+          <p>Get <a href="download/regula.zip">regula.zip</a>, then:</p>
+          <pre class="code"><code>unzip ~/Downloads/regula.zip -d ~/.local/share/</code></pre>
+        </li>
+        <li>
+          <h3>Run it</h3>
+          <pre class="code"><code>~/.venvs/regula/bin/python ~/.local/share/regula/regula.py</code></pre>
+          <p class="small">First time? Press <kbd>K</kbd> and calibrate with a card if you need exact results.</p>
+        </li>
+        <li>
+          <h3>Add it to your app menu <span class="optional">optional</span></h3>
+          <pre class="code"><code>mkdir -p ~/.local/share/applications
+cat &gt; ~/.local/share/applications/regula.desktop &lt;&lt;EOF
+[Desktop Entry]
+Type=Application
+Name=Regula
+Comment=Real-size rulers, protractors and measuring tools
+Exec=$HOME/.venvs/regula/bin/python $HOME/.local/share/regula/regula.py
+Icon=$HOME/.local/share/regula/regula.svg
+Categories=Utility;
+StartupWMClass=Regula
+Terminal=false
+EOF</code></pre>
+        </li>
+      </ol>
+      <p class="small">Settings and calibration are stored in <code>~/.config/regula/config.json</code>.</p>
+    </div>
+  </section>
+
+  <!-- ===== Download ===== -->
+  <section id="download" class="band">
+    <div class="wrap narrow">
+      <div class="download">
+        <img src="icon.svg" alt="" width="72" height="72">
+        <div class="download-text">
+          <h2>Download</h2>
+          <p>One Python file and an icon. No account, no telemetry, no network access — read the code before you run it.</p>
+          <div class="cta">
+            <a class="btn" href="download/regula.zip" download>regula.zip <span class="size">26 kB</span></a>
+            <a class="btn btn-ghost" href="download/regula.py">View regula.py <span class="size">89 kB</span></a>
+          </div>
+          <p class="small">Updated November 2026.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="ticks" aria-hidden="true"></div>
+  <div class="wrap foot-row">
+    <span><img src="icon.svg" alt="" width="20" height="20"> Regula</span>
+    <span>Made by <a href="https://github.com/Daniel-v8">Daniel-v8</a></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

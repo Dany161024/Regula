@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=Application
+Name=Regula
+GenericName=Pravítka a uhlomer
+Comment=Pravítka, uhlomer, uhlopriečka displeja, skrutky, rozteč pinov a ďalšie meradlá na celú obrazovku
+Exec=/usr/bin/python3 /home/daniel/regula/regula.py
+Icon=/home/daniel/regula/regula.svg
+Terminal=false
+Categories=Utility;
+Keywords=ruler;protractor;pravitko;pravítko;uhlomer;meranie;cm;palce;pixely;priemer;polomer;uhlopriecka;uhlopriečka;skrutky;roztec;rozteč;plocha;mm papier;
+StartupNotify=true
+StartupWMClass=Regula
+Actions=uhlomer;
+
+[Desktop Action uhlomer]
+Name=Uhlomer
+Exec=/usr/bin/python3 /home/daniel/regula/regula.py --uhlomer
